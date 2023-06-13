@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+    <link rel="stylesheet" href="/w3css/3/w3.css">
+
+    <title>Vseventee</title>
+</head>
+
+<body>
+    <nav class="w3-bar w3-black">
+        <a href="#home" class="w3-button w3-bar-item">Home</a>
+        <a href="#band" class="w3-button w3-bar-item">Band</a>
+        <a href="#tour" class="w3-button w3-bar-item">Tour</a>
+        <a href="#contact" class="w3-button w3-bar-item">Contact</a>
+    </nav>
+
+    <section>
+        <img class="mySlides" src="img/" style="width: 100%;">
+        <img class="mySlides" src="img/" style="width: 100%;">
+        <img class="mySlides" src="img/" style="width: 100%;">
+    </section>
+
+    <script>
+        var myIndex = 0;
+        carrocel();
+
+        function carrocel(){
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carrocel, 3000);
+        }
+    </script>
+
+    <section class="w3-container w3-center" style="max-width:600px"> 
+<h2 class="w3-wide">THE BAND</h2>
+<p class="w3-opacity"><i>We love music</i>/p>
+    </section>
+</body>
+
+</html>
